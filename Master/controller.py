@@ -17,6 +17,7 @@ from ui_hough_line_transform_window import Ui_Hough_Line_Transform_Window
 from ui_harris_corner_detection_window import Ui_Harris_Corner_Detection_Window
 from ui_feature_detection_window import Ui_Feature_Detection_Window
 from ui_feature_description_window import Ui_Feature_Description_Window
+from ui_finding_contours_window import Ui_Finding_Contours_Window
 
 
 import numpy as np
@@ -297,6 +298,14 @@ class MainWindow(QMainWindow):
         else:
             self.Statusbar_Message("No Image")
 
+    def Finding_Contours(self):
+        if self.filename != "":
+            print("Finding Contours")
+            self.findingcontours = Ui_Finding_Contours_Window(self)
+            self.findingcontours.show()
+        else:
+            self.Statusbar_Message("No Image")
+
 
 
     def show_img(self, img = None):
@@ -380,3 +389,4 @@ class MainWindow(QMainWindow):
         self._window.Harris_Corner_Detection_action.triggered.connect(self.Harris_Corner_Detection)
         self._window.Feature_Detection_action.triggered.connect(self.Feature_Detection)
         self._window.Feature_Description_action.triggered.connect(self.Feature_Description)
+        self._window.Finding_Contours_action.triggered.connect(self.Finding_Contours)
