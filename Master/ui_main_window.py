@@ -100,6 +100,9 @@ class Ui_Main_Window(QMainWindow):
         self.Canny_Edge_Detection_action = QAction(self.Image_Detection_menu)
         self.Canny_Edge_Detection_action.setText("Canny Edge Detection (Canny邊緣檢測)")
         self.Image_Detection_menu.addAction(self.Canny_Edge_Detection_action)
+        self.Hough_Line_Transform_action = QAction(self.Image_Detection_menu)
+        self.Hough_Line_Transform_action.setText("Hough Line Transform (霍夫轉換)")
+        self.Image_Detection_menu.addAction(self.Hough_Line_Transform_action)
 
         self.Top_menubar.addAction(self.Image_Detection_menu.menuAction())
     #Image_Detection_menu

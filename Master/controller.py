@@ -13,6 +13,7 @@ from ui_translate_rotate_window import Ui_Translate_Rotate_Window
 from ui_affine_transform_window import Ui_Affine_Transform_Window
 from ui_image_filtering_window import Ui_Image_Filtering_Window
 from ui_canny_edge_detection_window import Ui_Canny_Edge_Detection_Window
+from ui_hough_line_transform_window import Ui_Hough_Line_Transform_Window
 
 
 import numpy as np
@@ -261,6 +262,14 @@ class MainWindow(QMainWindow):
         else:
             self.Statusbar_Message("No Image")
 
+    def Hough_Line_Transform(self):
+        if self.filename != "":
+            print("Hough Line Transform")
+            self.houghlinetransform = Ui_Hough_Line_Transform_Window(self)
+            self.houghlinetransform.show()
+        else:
+            self.Statusbar_Message("No Image")
+
 
 
     def show_img(self, img = None):
@@ -340,3 +349,4 @@ class MainWindow(QMainWindow):
         self._window.Affine_Transform_action.triggered.connect(self.Affine_Transform)
         self._window.Image_Filtering_action.triggered.connect(self.Image_Filtering)
         self._window.Canny_Edge_Detection_action.triggered.connect(self.Canny_Edge_Detection)
+        self._window.Hough_Line_Transform_action.triggered.connect(self.Hough_Line_Transform)
