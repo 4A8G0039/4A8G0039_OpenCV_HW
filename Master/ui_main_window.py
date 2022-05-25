@@ -1,17 +1,11 @@
-#pyside2-uic mainwindow.ui > ui_mainwindow.py
-import sys
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
 class Ui_Main_Window(QMainWindow):
-    # def __init__(self):
-    #     super(Ui_MainWindow, self).__init__()
-    #     self.setupUi(self)
-
     def setupUi(self, MainWindow):
-        MainWindow.setFixedSize(300, 300) #設定視窗大小
+        MainWindow.setFixedSize(400, 400) #設定視窗大小
         MainWindow.setWindowTitle("4A8G0039") #設定視窗標題
     #CentralWidget#
         self.centralwidget = QWidget(MainWindow) #新增一個QWidget命名為centralwidget
@@ -39,6 +33,7 @@ class Ui_Main_Window(QMainWindow):
         self.File_menu.addAction(self.SaveFile_action)
         self.Top_menubar.addAction(self.File_menu.menuAction())
     #File_menu
+
     #Setting_menu
         self.Setting_menu = QMenu(self.Top_menubar)
         self.Setting_menu.setTitle("Setting")
@@ -68,6 +63,7 @@ class Ui_Main_Window(QMainWindow):
 
         self.Top_menubar.addAction(self.Setting_menu.menuAction())
     #Setting_menu
+
     #Image_Processing_menu
         self.Image_Processing_menu = QMenu(self.Top_menubar)
         self.Image_Processing_menu.setTitle("Image Processing")
@@ -97,9 +93,20 @@ class Ui_Main_Window(QMainWindow):
 
         self.Top_menubar.addAction(self.Image_Processing_menu.menuAction())
     #Image_Processing_menu
+    
+    #Image_Detection_menu
+        self.Image_Detection_menu = QMenu(self.Top_menubar)
+        self.Image_Detection_menu.setTitle("Image Detection")
+        self.Canny_Edge_Detection_action = QAction(self.Image_Detection_menu)
+        self.Canny_Edge_Detection_action.setText("Canny Edge Detection (Canny邊緣檢測)")
+        self.Image_Detection_menu.addAction(self.Canny_Edge_Detection_action)
+
+        self.Top_menubar.addAction(self.Image_Detection_menu.menuAction())
+    #Image_Detection_menu
 
         MainWindow.setMenuBar(self.Top_menubar)
     #MenuBar#
+
     #StatusBar#
         self.statusbar = QStatusBar(MainWindow)
         MainWindow.setStatusBar(self.statusbar)
