@@ -1,10 +1,11 @@
 import cv2
+from scipy.spatial import distance as dist
+
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from scipy.spatial import distance as dist
-import numpy as np
 
+import numpy as np
 
 class Ui_Perspective_Transform_Window(QWidget):
     def __init__(self, cPT_o, cPT_r, qPT):

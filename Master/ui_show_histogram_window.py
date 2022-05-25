@@ -1,12 +1,10 @@
 import cv2
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+from matplotlib.figure import Figure
+
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
-from matplotlib.figure import Figure
-import numpy as np
-
 
 class MplCanvas(FigureCanvasQTAgg):
 
@@ -45,9 +43,3 @@ class Ui_Show_Histogram_Window(QWidget):
         layout.addWidget(sc)
 
         self.setLayout(layout)
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     window = Ui_Showhistogram()
-#     window.show()
-#     sys.exit(app.exec_())

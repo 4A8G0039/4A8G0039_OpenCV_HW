@@ -1,4 +1,5 @@
 import sys
+
 from controller import MainWindow
 from PySide2.QtCore import *
 from PySide2.QtGui import *

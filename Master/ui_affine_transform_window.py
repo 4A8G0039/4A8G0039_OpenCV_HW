@@ -1,8 +1,9 @@
-import sys
 import cv2
+
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
 import numpy as np
 
 class Ui_Affine_Transform_Window(QWidget):
@@ -427,9 +428,3 @@ class Ui_Affine_Transform_Window(QWidget):
         M = cv2.getAffineTransform(src, dst)
         img = cv2.warpAffine(img,M,(x,y))
         return img
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     window = Ui_Affine_Transform_Window(100, 2000)
-#     window.show()
-#     sys.exit(app.exec_())

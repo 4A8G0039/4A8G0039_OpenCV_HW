@@ -1,10 +1,8 @@
-import sys
+import cv2
+
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-import cv2
-import numpy as np
-
 
 class Ui_Blur(QWidget):
     def __init__(self, mainWindow):
@@ -219,11 +217,3 @@ def slide(Window, type = 2, name = ["s1", "s2", "s3"], Range = [1, 11, 1, 11, 0,
         Window.s3_horizontalLayout.addWidget(Window.s3_value)
 
         Window.main_verticalLayout.addLayout(Window.s3_horizontalLayout)
-
-    
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     window = Ui_Blur()
-#     window.show()
-#     sys.exit(app.exec_())

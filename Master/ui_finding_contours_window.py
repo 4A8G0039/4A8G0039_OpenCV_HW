@@ -1,8 +1,10 @@
 import cv2
 import random
+
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
 import numpy as np
 
 class Ui_Finding_Contours_Window(QWidget):
@@ -21,12 +23,6 @@ class Ui_Finding_Contours_Window(QWidget):
 
 #####################################################################################
         self.contour_type_horizontalLayout = QHBoxLayout()
-
-
-        # self.c_contour = QCheckBox()
-        # self.c_contour.setText("Contour")
-        # self.c_contour.setChecked(False)
-        # self.contour_type_horizontalLayout.addWidget(self.c_contour)
 
         self.c_convex_hull = QCheckBox()
         self.c_convex_hull.setText("Convex Hull")

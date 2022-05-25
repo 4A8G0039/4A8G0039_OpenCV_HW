@@ -22,7 +22,6 @@ from ui_morphology_transformations_window import Ui_Morphology_Transformations_W
 
 import numpy as np
 
-
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()

@@ -2,7 +2,6 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-
 class Ui_Main_Window(QMainWindow):
     def setupUi(self, MainWindow):
         MainWindow.setFixedSize(400, 400) #設定視窗大小
@@ -130,4 +129,3 @@ class Ui_Main_Window(QMainWindow):
         MainWindow.setStatusBar(self.statusbar)
     #StatusBar#
         QMetaObject.connectSlotsByName(MainWindow)
-        

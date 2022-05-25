@@ -1,8 +1,8 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-import numpy as np
 
+import numpy as np
 
 class Ui_Translate_Rotate_Window(QWidget):
     def __init__(self, imgwidth, imgheight):

@@ -1,8 +1,10 @@
-import math
 import cv2
+import math
+
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
 import numpy as np
 
 class Ui_Hough_Line_Transform_Window(QWidget):

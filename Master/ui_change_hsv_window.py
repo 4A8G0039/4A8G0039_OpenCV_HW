@@ -1,10 +1,8 @@
-import sys
-import cv2
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-import numpy as np
 
+import numpy as np
 
 class Ui_Change_Hsv_Window(QWidget):
     def __init__(self):
@@ -241,9 +239,3 @@ class Ui_Change_Hsv_Window(QWidget):
             self.l_h_Slider.setValue(0)
             self.l_s_Slider.setValue(0)
             self.l_v_Slider.setValue(0)
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     window = Ui_ChangehsvWindow()
-#     window.show()
-#     sys.exit(app.exec_())
