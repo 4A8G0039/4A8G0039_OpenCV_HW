@@ -16,6 +16,7 @@ from ui_canny_edge_detection_window import Ui_Canny_Edge_Detection_Window
 from ui_hough_line_transform_window import Ui_Hough_Line_Transform_Window
 from ui_harris_corner_detection_window import Ui_Harris_Corner_Detection_Window
 from ui_feature_detection_window import Ui_Feature_Detection_Window
+from ui_feature_description_window import Ui_Feature_Description_Window
 
 
 import numpy as np
@@ -288,6 +289,14 @@ class MainWindow(QMainWindow):
         else:
             self.Statusbar_Message("No Image")
 
+    def Feature_Description(self):
+        if self.filename != "":
+            print("Feature Description")
+            self.featuredescription = Ui_Feature_Description_Window(self)
+            self.featuredescription.show()
+        else:
+            self.Statusbar_Message("No Image")
+
 
 
     def show_img(self, img = None):
@@ -370,3 +379,4 @@ class MainWindow(QMainWindow):
         self._window.Hough_Line_Transform_action.triggered.connect(self.Hough_Line_Transform)
         self._window.Harris_Corner_Detection_action.triggered.connect(self.Harris_Corner_Detection)
         self._window.Feature_Detection_action.triggered.connect(self.Feature_Detection)
+        self._window.Feature_Description_action.triggered.connect(self.Feature_Description)
